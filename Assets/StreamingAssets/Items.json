@@ -12,7 +12,7 @@
 		"description": "Gloves made from steel.",
 		"stackable": false,
 		"rarity": 2,
-		"slug": "steel_gloves"
+		"slug": "glovesSteel"
 	},
 	{
 		"id": 1,
@@ -27,6 +27,6 @@
 		"description": "It's a stick that's pretty great.",
 		"stackable": true,
 		"rarity": 6,
-		"slug": "the_great_stick"
+		"slug": "swordWood"
 	}
 ]
