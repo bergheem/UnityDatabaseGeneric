@@ -62,6 +62,7 @@ public class Inventory : MonoBehaviour
 				{
 					items[i] = itemToAdd;
 					GameObject itemObj = Instantiate(inventoryItem);
+					itemObj.GetComponent<ItemData>().item = itemToAdd;
 					itemObj.transform.SetParent(slots[i].transform);
 					itemObj.transform.localScale = Vector3.one;
 					itemObj.transform.position = Vector2.zero;
