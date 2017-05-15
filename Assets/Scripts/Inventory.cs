@@ -46,7 +46,7 @@ public class Inventory : MonoBehaviour
 		{
 			for (int i = 0; i < items.Count; i++)
 			{
-				if (items[i].ID == itemToAdd.ID)
+				if (items[i].ID == id)
 				{
 					ItemData data = slots[i].transform.GetChild(0).GetComponent<ItemData>();
 					data.amount++;
@@ -64,6 +64,7 @@ public class Inventory : MonoBehaviour
 					items[i] = itemToAdd;
 					GameObject itemObj = Instantiate(inventoryItem);
 					itemObj.GetComponent<ItemData>().item = itemToAdd;
+					itemObj.GetComponent<ItemData>().amount = 1;
 					itemObj.GetComponent<ItemData>().slot = i;
 					itemObj.transform.SetParent(slots[i].transform);
 					itemObj.transform.localScale = Vector3.one;

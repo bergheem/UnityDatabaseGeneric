@@ -25,7 +25,7 @@ public class Slot : MonoBehaviour, IDropHandler
 			inv.items[id] = droppedItem.item;
 			droppedItem.slot = id;
 		}
-		else
+		else if (droppedItem.slot != id)
 		{
 			Transform itemToSwap = this.transform.GetChild(0);
 			itemToSwap.GetComponent<ItemData>().slot = droppedItem.slot;
