@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
 			slots.Add(Instantiate(inventorySlot));
 			slots[i].transform.SetParent(slotPanel.transform);
 			slots[i].transform.localScale = Vector3.one;
+			slots[i].GetComponent<Slot>().id = i;
 		}
 
 		AddItem(0);
@@ -63,6 +64,7 @@ public class Inventory : MonoBehaviour
 					items[i] = itemToAdd;
 					GameObject itemObj = Instantiate(inventoryItem);
 					itemObj.GetComponent<ItemData>().item = itemToAdd;
+					itemObj.GetComponent<ItemData>().slot = i;
 					itemObj.transform.SetParent(slots[i].transform);
 					itemObj.transform.localScale = Vector3.one;
 					itemObj.transform.position = Vector2.zero;
